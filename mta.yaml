@@ -1,0 +1,55 @@
+ID: pltestCAP
+_schema-version: "2.1"
+description: CAP Business Application
+parameters:
+  deploy_mode: html5-repo
+version: 0.0.1
+modules:
+  - name: pltestcap-approuter
+    type: approuter.nodejs
+    path: pltestcap-approuter
+    parameters:
+      disk-quota: 256M
+      memory: 256M
+    requires:
+      - name: pltestCAP_html5_repo_runtime
+  - name: pltestCAP_ui_deployer
+    type: com.sap.html5.application-content
+    path: pltestCAP_ui_deployer
+    requires:
+      - name: pltestCAP_html5_repo_host
+  - name: pltestCAP-db
+    type: hdb
+    path: db
+    parameters:
+      memory: 256M
+      disk-quota: 256M
+    requires:
+      - name: pltestCAP-db-hdi-container
+  - name: pltestCAP-srv
+    type: nodejs
+    path: srv
+    parameters:
+      memory: 512M
+      disk-quota: 256M
+    provides:
+      - name: srv_api
+        properties:
+          url: ${default-url}
+    requires:
+      - name: pltestCAP-db-hdi-container
+resources:
+  - name: pltestCAP_html5_repo_runtime
+    parameters:
+      service-plan: app-runtime
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+  - name: pltestCAP_html5_repo_host
+    parameters:
+      service-plan: app-host
+      service: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+  - name: pltestCAP-db-hdi-container
+    type: com.sap.xs.hdi-container
+    properties:
+      hdi-container-name: ${service-name}
