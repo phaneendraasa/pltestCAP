@@ -25,6 +25,16 @@ general:
 
 ### Step-specific configuration
 steps:
+  mtaBuild:
+    buildTarget: 'CF'
+    mtaBuildTool: 'classic'
+    cloudFoundryDeploy:
+    deployTool: 'mtaDeployPlugin'
+    deployType: 'standard'
+    cloudFoundry:
+      org: 'p2000231791trial'
+      space: 'dev'
+      credentialsId: 'plcredcf'
 
 
 ### Stage-specific configuration
@@ -45,11 +55,11 @@ stages:
 #    nonErpDestinations:
 #      - 'myCustomDestination'
 
-#  productionDeployment:
-#    cfTargets:
-#      - org: 'myOrg'
-#        space: 'mySpace'
-#        apiEndpoint: 'https://'
-#        appName: 'myAppName'
-#        manifest: 'manifest.yml'
-#        credentialsId: 'myDeploymentCredentialsId'
+  productionDeployment:
+    cfTargets:
+      - org: 'p2000231791trial'
+        space: 'dev'
+        apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+        appName: 'pltestcapproj'
+#       manifest: 'manifest.yml'
+        credentialsId: 'plcredcf'
