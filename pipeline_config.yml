@@ -22,7 +22,6 @@
 ### General project setup
 general:
 
-
 ### Step-specific configuration
 steps:
    mtaBuild:
