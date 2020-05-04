@@ -25,16 +25,14 @@ general:
 
 ### Step-specific configuration
 steps:
-  mtaBuild:
+   mtaBuild:
     buildTarget: 'CF'
-    mtaBuildTool: 'classic'
-    cloudFoundryDeploy:
-    deployTool: 'mtaDeployPlugin'
-    deployType: 'standard'
+  cloudFoundryDeploy:
     cloudFoundry:
+      credentialsId: 'plcredcf'
+      apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
       org: 'p2000231791trial'
       space: 'dev'
-      credentialsId: 'plcredcf'
 
 
 ### Stage-specific configuration
