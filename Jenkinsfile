@@ -25,7 +25,6 @@ String pipelineVersion = "v32"
     load './pipelines/s4sdk-pipeline.groovy'
 } */
 @Library('piper-lib-os') _
-@Library('piper-lib-local') _
 
 node(){
   stage('Prepare')   {
