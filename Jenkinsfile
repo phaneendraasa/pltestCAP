@@ -34,7 +34,8 @@ node(){
   }
 
   stage('Build')   {
-      mtaBuild script:this
+      mtaBuild( script:this,
+      verbose: 'true' )
   }
 
   stage('Deploy')   {
