@@ -30,7 +30,7 @@ steps:
     cloudFoundry:
       credentialsId: 'plcredcf'
       apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
-      org: 'aa378e97-ae00-494f-99b9-88d2563c67d0'
+      cloudFoundry/org: 'aa378e97-ae00-494f-99b9-88d2563c67d0'
       space: 'dev'
 
 
@@ -54,7 +54,7 @@ stages:
 
   productionDeployment:
     cfTargets:
-      - org: 'p2000231791trial'
+      - org: 'aa378e97-ae00-494f-99b9-88d2563c67d0'
         space: 'dev'
         apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
         appName: 'pltestcapproj'
