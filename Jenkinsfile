@@ -38,8 +38,11 @@ node(){
       script:this,
       verbose:'true' )
   }
+  
+   stage('deploy') {
+    cloudFoundryDeploy( 
+        script: this,
+        verbose: 'true' )
+    }
 
-  stage('Deploy')   {
-      cloudFoundryDeploy script:this, deployTool:'mtaDeployPlugin'
-  }
 }
