@@ -27,12 +27,13 @@ steps:
    mtaBuild:
     buildTarget: 'CF'
    cloudFoundryDeploy:
+   cloudFoundry:
+      org: 'P2000231791trial_trial'
+      space: 'dev'
+      credentialsId: 'plcredcf'
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
-    cloudFoundry:
-      space: 'dev'
-      org:'P2000231791trial_trial'
-      credentialsId: 'plcredcf'
+    
 
 
 
