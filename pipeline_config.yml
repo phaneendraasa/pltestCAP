@@ -28,9 +28,10 @@ steps:
     buildTarget: 'CF'
    cloudFoundryDeploy:
    cloudFoundry:
+   credentialsId: 'plcredcf'
+      apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
       org: 'P2000231791trial_trial'
       space: 'dev'
-      credentialsId: 'plcredcf'
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
     
