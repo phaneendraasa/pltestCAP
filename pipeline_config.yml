@@ -30,7 +30,7 @@ steps:
       cloudFoundry:
         credentialsId: 'plcredcf'
         apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
-        org: 'P2000231791trial_trial'
+        org: 'p2000231791trial'
         space: 'dev'
 
     
