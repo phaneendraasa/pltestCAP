@@ -34,11 +34,11 @@ node(){
       setupCommonPipelineEnvironment script:this
   }
 
- /* stage('Build')   {
+  stage('Build')   {
       mtaBuild(
       script:this,
       verbose:'true' )
-  } */
+  } 
   
    stage('deploy') {
     cloudFoundryDeploy( 
