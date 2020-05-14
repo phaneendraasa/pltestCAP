@@ -3,7 +3,7 @@ steps:
   mtaBuild:
     buildTarget: 'CF'
     mtaBuildTool: 'classic'
-    mtaPath: 'pltestcapproj.mtar'
+    
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
