@@ -7,6 +7,7 @@ entity Employees {
   hr_payroll : Association to Hr_Payroll;
   career_Level  : Integer;
   role : String;
+  loc : String;
 }
 
 entity Hr_Payroll {
