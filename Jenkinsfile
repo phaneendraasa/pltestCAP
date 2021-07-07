@@ -34,7 +34,7 @@ node(){
       setupCommonPipelineEnvironment script:this
   }
 
-  stage('Build')   {
+ /* stage('Build')   {
       mtaBuild(
       script:this,
       verbose:'true' )
@@ -44,6 +44,6 @@ node(){
     cloudFoundryDeploy( 
         script: this,
         verbose: 'true' )
-    }
+    }*/
 
 }
