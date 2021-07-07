@@ -24,8 +24,8 @@ String pipelineVersion = "v32"
     sh "git clone --depth 1 https://github.com/SAP/cloud-s4-sdk-pipeline.git -b ${pipelineVersion} pipelines"
     load './pipelines/s4sdk-pipeline.groovy'
 } */
-@Library('piper-lib-os') _
-/*@Library('piper-lib-local') _*/
+/*@Library('piper-lib-os') _*/
+@Library('piper-lib-local') _
 
 node(){
   stage('Prepare')   {
@@ -33,6 +33,10 @@ node(){
       checkout scm
       setupCommonPipelineEnvironment script:this
   }
+
+
+
+}
 
  /* stage('Build')   {
       mtaBuild(
@@ -44,6 +48,4 @@ node(){
     cloudFoundryDeploy( 
         script: this,
         verbose: 'true' )
-    }*/
-
-}
+    } */
