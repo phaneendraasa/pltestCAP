@@ -38,9 +38,6 @@ stage('Build')   {
   }
 
 stage('Code Review')   {
-      sleep(5) {
-          // on interrupt do
-      }
       echo 'Code Review is successful'
   }
 
