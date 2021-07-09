@@ -37,6 +37,21 @@ stage('Build')   {
       echo 'Build Step is Completed'
   }
 
+stage('Code Review')   {
+      sleep(5) {
+          // on interrupt do
+      }
+      echo 'Code Review is successful'
+  }
+
+stage('Unit Test')   {
+      echo 'Unit Test is Successful'
+  }
+
+stage('Deploy')   {
+      echo 'Deployment is Successful'
+  }    
+
 
 }
 
