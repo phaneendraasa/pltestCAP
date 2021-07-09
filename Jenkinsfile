@@ -43,10 +43,12 @@ stage('Code Review')   {
   }
 
 stage('Unit Test')   {
+    sleep 10
       echo 'Unit Test is Successful'
   }
 
 stage('Deploy')   {
+    sleep 10
       echo 'Deployment is Successful'
   }    
 
