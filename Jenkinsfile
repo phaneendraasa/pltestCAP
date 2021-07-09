@@ -38,6 +38,7 @@ stage('Build')   {
   }
 
 stage('Code Review')   {
+    sleep 5
       echo 'Code Review is successful'
   }
 
