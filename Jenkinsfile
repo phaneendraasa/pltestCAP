@@ -34,7 +34,9 @@ node(){
       setupCommonPipelineEnvironment script:this
   }
 stage('Build')   {
-      echo 'Build Step is Completed'
+      mtaBuild(
+      script:this,
+      verbose:'true' )
   }
 
 stage('Code Review')   {
